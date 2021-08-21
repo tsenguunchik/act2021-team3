@@ -1,18 +1,18 @@
 import './App.css';
-import Header from "./components/header"
+import Header from "./components/Header";
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 import Home from "./pages/Home";
 import Error404page from "./pages/Error404page";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import React from "react";
 
 function App() {
   return (
       <BrowserRouter>
-        <div className="App">
-          <Header />
+        <div className="Home">
+          <Home/>
           <div className="login">
-
           </div>
           <Switch>
             <Route path='/' component={Home} exact/>
