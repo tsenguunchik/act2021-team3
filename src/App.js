@@ -1,36 +1,34 @@
 import './App.css';
-import Boardpage from './pages/boardpage';
-import Home from './pages/home';
-import Login from './pages/login';
-import Signup from './pages/signup';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Header from "./components/header"
+import {BrowserRouter, Route, Switch} from "react-router-dom";
+import Home from "./pages/Home";
+import Error404page from "./pages/Error404page";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 
 function App() {
   return (
-    <Router>
-      <div>
-        <Switch>
-          <Route path="/home">
-            <Home />
-          </Route>
-        </Switch>
-        <Switch>
-          <Route path="/signup">
-            <Signup />
-          </Route>
-        </Switch>
-        <Switch>
-          <Route path="/login">
-            <Login />
-          </Route>
-        </Switch>
-        <Switch>
-          <Route path="/boardpage">
-            <Boardpage />
-          </Route>
-        </Switch>
-      </div>
-    </Router>
+      <BrowserRouter>
+        <div className="App">
+          <Header />
+          <div className="login">
+
+          </div>
+          <Switch>
+            <Route path='/' component={Home} exact/>
+            <Route path='/boardpage'>
+            </Route>
+            <Route path='/login'>
+              <Login />
+            </Route>
+            <Route path='/signup'>
+              <Signup/>
+            </Route>
+            <Route component={Error404page}/>
+          </Switch>
+        </div>
+      </BrowserRouter>
+
   );
 }
 
