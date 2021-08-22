@@ -10,7 +10,7 @@ const Section = styled.section`
   display: flex;
   justify-content: center;
   align-content: center;
-  background: aliceblue ;
+  background: #282c34 ;
   
 `;
 const Container = styled.div`
@@ -25,7 +25,7 @@ const Container = styled.div`
 `;
 const ColumnLeft = styled.div`
   display: flex;
-  color: #05386B;
+  color: #FFFFFF;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
@@ -49,7 +49,7 @@ const Button = styled(motion.button)`
   outline: none;
   cursor: pointer;
   background: transparent;
-  color: #05386B;
+  color: #FFFFFF;
 `;
 const Image = styled(motion.img)`
  position: absolute;
