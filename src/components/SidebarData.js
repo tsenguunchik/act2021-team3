@@ -1,8 +1,9 @@
 import React from 'react';
-import * as FaIcons from 'react-icons/fa';
+import * as GiIcons from 'react-icons/gi';
 import * as AiIcons from 'react-icons/ai';
 import * as IoIcons from 'react-icons/io';
 import * as RiIcons from 'react-icons/ri';
+import * as CgIcons from 'react-icons/cg'
 
 export const SidebarData = [
   {
@@ -33,12 +34,12 @@ export const SidebarData = [
   {
     title: 'My Profile',
     path: '/myprofile',
-    icon: <FaIcons.FaCartPlus />
+    icon: <CgIcons.CgProfile />
   },
   {
     title: 'My Posts',
     path: '/myposts',
-    icon: <IoIcons.IoMdPeople />
+    icon: <GiIcons.GiPostStamp />
   },
   
 ];

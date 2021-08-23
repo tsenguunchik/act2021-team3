@@ -5,7 +5,7 @@ import Navbar from "./components";
 import Error404page from "./pages/Error404page";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/Signup";
-import Boardpage from './pages/Boardpage';
+import Dashboard from './pages/Dashboard';
 import MyProfile from './pages/MyProfile';
 import MyPosts from './pages/MyPosts';
 import PreUniversity from './pages/PreUniversity';
@@ -21,12 +21,12 @@ function App() {
              <Route path='/' exact component={Home} />
              <Route path='/sign-up' component={SignUp} />
             <Route path='/sign-in' component={SignIn}/>
-            <Route path='/boards' component={Boardpage}/>
-            <Route path='/myprofile' component={MyProfile}/>
-            <Route path='/myposts' component={MyPosts}/>
+            <Route path='/boards' component={Dashboard}/>
             <Route path='/boards/pre-university' component={PreUniversity}/>
             <Route path='/boards/in-university' component={InUniversity}/>
             <Route path='/boards/post-university' component={PostUniversity}/>
+            <Route path='/myprofile' component={MyProfile}/>
+            <Route path='/myposts' component={MyPosts}/>
             <Route component={Error404page}/>
 
         </Switch>

@@ -1,5 +1,4 @@
 import React from 'react'
-import Navbar from '../components'
 import Sidebar from '../components/Sidebar'
 
 const PostUniversity = () => {
