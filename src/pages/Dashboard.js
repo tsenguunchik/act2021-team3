@@ -2,7 +2,10 @@ import Sidebar from "../components/Sidebar";
 
 const Dashboard = () => {
     return (
-      <Sidebar />
+      <div>
+        <Sidebar />
+        <h2>Welcome to boards</h2>
+      </div>
     )
 }
 

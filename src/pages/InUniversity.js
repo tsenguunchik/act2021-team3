@@ -4,7 +4,7 @@ import Sidebar from '../components/Sidebar'
 const InUniversity = () => {
     return (
         <div>
-        <Sidebar />
+            <Sidebar />
             <h2>In University</h2>
         </div>
     )

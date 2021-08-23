@@ -19,14 +19,14 @@ function App() {
         <Navbar />
         <Switch>
              <Route path='/' exact component={Home} />
-             <Route path='/sign-up' component={SignUp} />
-            <Route path='/sign-in' component={SignIn}/>
-            <Route path='/boards' component={Dashboard}/>
-            <Route path='/boards/pre-university' component={PreUniversity}/>
-            <Route path='/boards/in-university' component={InUniversity}/>
-            <Route path='/boards/post-university' component={PostUniversity}/>
-            <Route path='/myprofile' component={MyProfile}/>
-            <Route path='/myposts' component={MyPosts}/>
+             <Route path='/sign-up' exact component={SignUp} />
+            <Route path='/sign-in' exact component={SignIn}/>
+            <Route path='/boards' exact component={Dashboard}/>
+            <Route path='/boards/pre-university' exact component={PreUniversity}/>
+            <Route path='/boards/in-university' exact component={InUniversity}/>
+            <Route path='/boards/post-university' exact component={PostUniversity}/>
+            <Route path='/myprofile' exact component={MyProfile}/>
+            <Route path='/myposts' exact component={MyPosts}/>
             <Route component={Error404page}/>
 
         </Switch>
