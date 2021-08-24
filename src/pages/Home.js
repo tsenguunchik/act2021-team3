@@ -5,6 +5,7 @@ import globe from  '../images/globe.svg'
 import Ellipse from  '../images/Ellipse.svg'
 import Saly from  '../images/Saly.svg'
 import sully from  '../images/sully.svg'
+
 const Section = styled.section`
   height: 100vh;
   display: flex;
