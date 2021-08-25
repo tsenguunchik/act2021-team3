@@ -5,7 +5,7 @@ const Boards = () => {
   return (
     <div>
       <Sidebar />
-      <h1 className="Title">Welcome to Twogather</h1>
+      <h2 className="Title">Welcome to Twogather</h2>
       <p>
         A paragraph explaining the boards and their use
       </p>

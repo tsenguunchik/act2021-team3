@@ -1,13 +1,15 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Sidebar from '../components/Sidebar'
 
-const MyPosts = () => {
-    return (
-        <div>
-        <Sidebar />
-            <h2>My posts</h2>
-        </div>
-    )
+export class MyPosts extends Component {
+    render() {
+        return (
+            <div>
+                <Sidebar />
+                <h2>MyPosts Page</h2>
+            </div>
+        )
+    }
 }
 
 export default MyPosts

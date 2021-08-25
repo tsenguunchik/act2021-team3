@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import * as FaIcons from 'react-icons/fa';
+import * as GoIcons from 'react-icons/go';
 import * as AiIcons from 'react-icons/ai';
 import { SidebarData } from './SidebarData';
 import SubMenu from './SubMenu';
@@ -16,9 +16,9 @@ const Nav = styled.div`
 `;
 
 const NavIcon = styled(Link)`
-  margin-left: 2rem;
+  margin-left: 0.8rem;
   font-size: 2rem;
-  height: 40px;
+  height: 60px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -33,7 +33,7 @@ const SidebarNav = styled.nav`
   position: fixed;
   top: 0;
   left: ${({ sidebar }) => (sidebar ? '0' : '-100%')};
-  transition: 350ms;
+  transition: 700ms;
   z-index: 10;
 `;
 
@@ -51,13 +51,13 @@ const Sidebar = () => {
       <IconContext.Provider value={{ color: '#fff' }}>
         <Nav>
           <NavIcon to='#'>
-            <FaIcons.FaBars onClick={showSidebar} />
+            <GoIcons.GoThreeBars onClick={showSidebar} />
           </NavIcon>
         </Nav>
         <SidebarNav sidebar={sidebar}>
           <SidebarWrap>
             <NavIcon to='#'>
-              <AiIcons.AiOutlineClose onClick={showSidebar} />
+              <AiIcons.AiOutlineCloseCircle onClick={showSidebar} />
             </NavIcon>
             {SidebarData.map((item, index) => {
               return <SubMenu item={item} key={index} />;
