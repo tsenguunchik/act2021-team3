@@ -1,5 +1,6 @@
 import React from "react";
-import Sidebar from '../components/Sidebar'
+import Navbar from "../components/navbar";
+import Sidebar from '../components/sidebar/Sidebar'
 
 const Boards = () => {
   return (
