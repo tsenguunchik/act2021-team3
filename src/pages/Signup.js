@@ -13,18 +13,18 @@ import Container from '@material-ui/core/Container';
 import Navbar1 from '../components/navbar/Navbar1';
 
 
-function Copyright() {
-    return (
-        <Typography variant="body2" color="textSecondary" align="center">
-            {'Copyright © '}
-            <Link color="inherit" href="https://material-ui.com/">
-                Twogather
-            </Link>{' '}
-            {new Date().getFullYear()}
-            {'.'}
-        </Typography>
-    );
-}
+// function Copyright() {
+//     return (
+//         <Typography variant="body2" color="textSecondary" align="center">
+//             {'Copyright © '}
+//             <Link color="inherit" href="https://material-ui.com/">
+//                 Twogather
+//             </Link>{' '}
+//             {new Date().getFullYear()}
+//             {'.'}
+//         </Typography>
+//     );
+// }
 
 const useStyles = makeStyles((theme) => ({
     paper: {
@@ -32,6 +32,7 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
+        height: '80vh'
     },
     avatar: {
         margin: theme.spacing(1),
@@ -140,9 +141,9 @@ export default function SignUp() {
                     </Grid>
                 </form>
             </div>
-            <Box mt={5}>
+            {/* <Box mt={5}>
                 <Copyright />
-            </Box>
+            </Box> */}
         </Container>
         </div>
     );

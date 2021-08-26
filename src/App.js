@@ -5,8 +5,6 @@ import Error404page from "./pages/Error404page";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/Signup";
 import Boards from './pages/Boards';
-import MyProfile from './pages/MyProfile';
-import MyPosts from './pages/MyPosts';
 import PreUniversity from './pages/PreUniversity';
 import PostUniversity from './pages/PostUniversity';
 import InUniversity from './pages/InUniversity';
@@ -25,8 +23,6 @@ function App() {
             <Route path='/boards/pre-university' exact component={PreUniversity}/>
             <Route path='/boards/in-university' exact component={InUniversity}/>
             <Route path='/boards/post-university' exact component={PostUniversity}/>
-            <Route path='/myprofile' exact component={MyProfile}/>
-            <Route path='/myposts' exact component={MyPosts}/>
             <Route exact path="/users/:handle" component={User} />
             <Route component={Error404page}/>
 
