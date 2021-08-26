@@ -5,6 +5,7 @@ import globe from  '../images/globe.svg'
 import Saly from  '../images/Saly.svg'
 import sully from  '../images/sully.svg'
 import Ellipse from  '../images/Ellipse.svg'
+import {Link} from "react-router-dom"
 import Navbar from "../components/navbar";
 import Sidebar from "../components/sidebar/Sidebar";
 
@@ -191,6 +192,7 @@ const Home = () => {
                   transition={{duration: 1}}
                   >
                      Some paragraph here</motion.p>
+                  <Link to="/sign-up">
                   <Button
                   whileHover={{ scale: 1.05}}
                   whileTap={{
@@ -204,6 +206,7 @@ const Home = () => {
                   >
                       Get Started
                   </Button>
+                  </Link>
               </ColumnLeft>
               <ColumnRight>
                   <Image
