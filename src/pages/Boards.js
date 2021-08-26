@@ -43,15 +43,7 @@ const Boards = () => {
       </Header>
       <Body>
         Here we can explain the boards
-        <Image
-          src={logo}
-          alt="globe"
-          whileTap={{scale: 0.6}}
-          drag={true}
-          dragConstraints={{ left: 50, rigth: 0, top: 0, bottom: 50}}
-          initial={{ opacity: 0, x: 100}}
-          animate={{ opacity: 1, x: 0, transition: {duration: 1}}}
-      />
+      
       </Body>
       
     </div>
