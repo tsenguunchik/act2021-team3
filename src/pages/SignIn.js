@@ -12,7 +12,7 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import Navbar from '../components/navbar';
+import Navbar1 from '../components/navbar/Navbar1';
 
 function Copyright() {
     return (
@@ -60,6 +60,8 @@ export default function SignIn() {
     };
 
     return (
+        <div>
+        <Navbar1 />
         <Container component="main" maxWidth="xs">
             <CssBaseline />
             <div className={classes.paper}>
@@ -124,5 +126,6 @@ export default function SignIn() {
                 <Copyright />
             </Box>
         </Container>
+        </div>
     );
 }

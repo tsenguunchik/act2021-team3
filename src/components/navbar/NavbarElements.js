@@ -1,4 +1,3 @@
-import { FaBars } from 'react-icons/fa';
 import { NavLink as Link } from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -6,9 +5,9 @@ export const Nav = styled.nav`
   background: #282c34 ;
   height: 80px;
   display: flex;
-  padding: 0.5rem ; 
+  padding: 0.5rem calc((100vw - 1000px) / 2);
   z-index: 10;
-  justify-content: flex-start;
+  justify-content: flex-end;
 `;
 
 export const NavLink = styled(Link)`
@@ -24,26 +23,12 @@ export const NavLink = styled(Link)`
   }
 `;
 
-export const Bars = styled(FaBars)`
-  display: none;
-  color: #fff;
-  @media screen and (max-width: 768px) {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-100%, 75%);
-    font-size: 1.8rem;
-    cursor: pointer;
-  }
-`;
-
 export const NavMenu = styled.div`
   display: flex;
   align-items: center;
   margin-right: -24px;
   @media screen and (max-width: 768px) {
-    display: none;
+    display: flex;
   }
 `;
 
@@ -52,11 +37,12 @@ export const NavBtn = styled.nav`
   align-items: center;
   margin-right: 24px;
   @media screen and (max-width: 768px) {
-    display: none;
+    display: flex;
   }
 `;
 
 export const NavBtnLink = styled(Link)`
+  display: flex;
   border-radius: 4px;
   background: linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%);
   padding: 10px 22px;
@@ -67,7 +53,6 @@ export const NavBtnLink = styled(Link)`
   transition: all 0.2s ease-in-out;
   text-decoration: none;
   margin-left: 24px;
-  
   &:hover {
     transition: all 0.2s ease-in-out;
     background: #fff;
