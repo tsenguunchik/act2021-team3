@@ -2,9 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import globe from  '../images/globe.svg'
-import Ellipse from  '../images/Ellipse.svg'
 import Saly from  '../images/Saly.svg'
 import sully from  '../images/sully.svg'
+import Ellipse from  '../images/Ellipse.svg'
 import Navbar from "../components/navbar";
 import Sidebar from "../components/sidebar/Sidebar";
 
@@ -216,14 +216,15 @@ const Home = () => {
                       animate={{ opacity: 1, x: 0, transition: {duration: 1}}}
                   />
                   <Image
-                      src={Saly}
+                      src={Ellipse}
                       alt="globe"
-                      whileTap={{scale: 0.8}}
+                      whileTap={{scale: 0.9}}
                       drag={true}
                       dragConstraints={{ left: 0, rigth: 250, top: 0, bottom: 50}}
-                      initial={{ opacity: 0, x: -100}}
-                      animate={{ opacity: 1, x: 0, transition: {duration: 1}}}
+                      initial={{ opacity: 0, y: -100}}
+                      animate={{ opacity: 1, y: 0, transition: {duration: 1}}}
                   />
+
                   <Image
                       src={sully}
                       alt="globe"
@@ -234,14 +235,16 @@ const Home = () => {
                       animate={{ opacity: 1, y: 0, transition: {duration: 1}}}
                   />
                   <Image
-                      src={Ellipse}
+                      src={Saly}
                       alt="globe"
-                      whileTap={{scale: 0.9}}
+                      whileTap={{scale: 0.8}}
                       drag={true}
                       dragConstraints={{ left: 0, rigth: 250, top: 0, bottom: 50}}
-                      initial={{ opacity: 0, y: -100}}
-                      animate={{ opacity: 1, y: 0, transition: {duration: 1}}}
+                      initial={{ opacity: 0, x: -100}}
+                      animate={{ opacity: 1, x: 0, transition: {duration: 1}}}
                   />
+
+
               </ColumnRight>
           </Container>
       </Section>

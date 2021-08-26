@@ -6,9 +6,9 @@ export const Nav = styled.nav`
   background: #282c34 ;
   height: 80px;
   display: flex;
-  ${'' /* padding: 0.5rem calc((100vw - 1000px) / 2); */}
+  padding: 0.5rem ; 
   z-index: 10;
-  justify-content: flex-end;
+  justify-content: flex-start;
 `;
 
 export const NavLink = styled(Link)`
@@ -67,6 +67,7 @@ export const NavBtnLink = styled(Link)`
   transition: all 0.2s ease-in-out;
   text-decoration: none;
   margin-left: 24px;
+  
   &:hover {
     transition: all 0.2s ease-in-out;
     background: #fff;
