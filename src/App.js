@@ -1,7 +1,6 @@
 import './App.css';
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import Home from "./pages/Home";
-import Navbar from "./components/navbar";
 import Error404page from "./pages/Error404page";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/Signup";
@@ -13,6 +12,7 @@ import PostUniversity from './pages/PostUniversity';
 import InUniversity from './pages/InUniversity';
 import User from './pages/User';
 import React from "react";
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -31,6 +31,9 @@ function App() {
             <Route component={Error404page}/>
 
         </Switch>
+        <div>
+          <Footer />
+        </div>
       </Router>
   );
 }

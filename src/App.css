@@ -5,31 +5,12 @@
   padding: 0;
 }
 
-
-/* Landing Page */
-.landing {
-  position: relative;
-  background: #ffffff;
-  height: 100vh;
-}
-
-.landing-inner {
-  color: #fff;
-  height: 100%;
-  width: 80%;
-  margin: auto;
+.footer {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.Title {
-  display: flex;
-  justify-content: center;
-  align-items: baseline;
   padding: 1em;
-  margin-bottom: 1em;
-  color: #282c34;
+  margin-bottom: 0em;
+  color: #ffffff;
+  background-color: #282c34;
 }
