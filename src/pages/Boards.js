@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "../components/navbar";
 import Sidebar from '../components/sidebar/Sidebar'
 import styled from "styled-components";
 import { motion } from "framer-motion";
