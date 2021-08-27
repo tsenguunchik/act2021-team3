@@ -6,8 +6,6 @@ import Saly from  '../images/Saly.svg'
 import sully from  '../images/sully.svg'
 import Ellipse from  '../images/Ellipse.svg'
 import {Link} from "react-router-dom"
-import Navbar from "../components/navbar";
-import Sidebar from "../components/sidebar/Sidebar";
 
 const Section = styled.section`
   height: 100vh;
@@ -85,89 +83,6 @@ const ColumnRight = styled.div`
     left: 10px;
   }
 `;
-// const Home = () => {
-//     const fadeLeft = {
-//         hidden: { opacity: 0, x: -100},
-//         visible: { opacity: 1,x: 0}
-//     };
-//     return (
-//         <Section>
-//             <Container>
-//                 <ColumnLeft>
-//                     <motion.h1
-//                     initial={{ opacity: 0 }}
-//                     animate={{ opacity: 1 }}
-//                     transition={{ duration: 1 }}
-//                     >
-//                         Welcome to Twogather
-//                     </motion.h1>
-//                     <motion.p
-//                     variant={fadeLeft}
-//                     initial='hidden'
-//                     animate='visible'
-//                     transition={{duration: 1}}
-//                     >
-//                        Some paragraph here</motion.p>
-//                     <Button
-//                     whileHover={{ scale: 1.05}}
-//                     whileTap={{
-//                         scale: 0.95,
-//                         backgroundColor: '#F76C6C',
-//                         border: 'none',
-//                         color: '#000'
-//                     }}
-//                     initiale={{ opacity: 0}}
-//                     animate={{ opacity: 1, transition: { duration: 1.5}}}
-//                     >
-//                         Get Started
-//                     </Button>
-//                 </ColumnLeft>
-//                 <ColumnRight>
-//                     <Image
-//                         src={globe}
-//                         alt="globe"
-//                         whileTap={{scale: 0.6}}
-//                         drag={true}
-//                         dragConstraints={{ left: 50, rigth: 0, top: 0, bottom: 50}}
-//                         initial={{ opacity: 0, x: 100}}
-//                         animate={{ opacity: 1, x: 0, transition: {duration: 1}}}
-//                     />
-//                     <Image
-//                         src={Saly}
-//                         alt="globe"
-//                         whileTap={{scale: 0.8}}
-//                         drag={true}
-//                         dragConstraints={{ left: 0, rigth: 250, top: 0, bottom: 50}}
-//                         initial={{ opacity: 0, x: -100}}
-//                         animate={{ opacity: 1, x: 0, transition: {duration: 1}}}
-//                     />
-//                     <Image
-//                         src={sully}
-//                         alt="globe"
-//                         whileTap={{scale: 0.9}}
-//                         drag={true}
-//                         dragConstraints={{ left: 0, rigth: 0, top: 0, bottom: 50}}
-//                         initial={{ opacity: 0, y: 100}}
-//                         animate={{ opacity: 1, y: 0, transition: {duration: 1}}}
-//                     />
-//                     <Image
-//                         src={Ellipse}
-//                         alt="globe"
-//                         whileTap={{scale: 0.9}}
-//                         drag={true}
-//                         dragConstraints={{ left: 0, rigth: 250, top: 0, bottom: 50}}
-//                         initial={{ opacity: 0, y: -100}}
-//                         animate={{ opacity: 1, y: 0, transition: {duration: 1}}}
-//                     />
-//                 </ColumnRight>
-//             </Container>
-//         </Section>
-
-
-//     );
-// }
-
-// export default Home;
 
 const Home = () => {
   const fadeLeft = {

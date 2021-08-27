@@ -2,7 +2,6 @@ import React from "react";
 import Sidebar from '../components/sidebar/Sidebar'
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import logo from '../images/logo.svg'
 
 const Header = styled.section`
   height: 60px;
@@ -18,14 +17,6 @@ const Body = styled.div`
   display: flex;
   height: 100vh;
   padding: 10px 22px;
-`;
-
-const Image = styled(motion.img)`
- position: absolute;
- width: 100%;
-  height: 150%;
-  max-width: 250px;
-  max-height: 300px;
 `;
 
 const Boards = () => {

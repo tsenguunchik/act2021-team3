@@ -13,7 +13,7 @@ import AddIcon from '@material-ui/icons/Add';
 import CloseIcon from '@material-ui/icons/Close';
 // Redux stuff
 import { connect } from 'react-redux';
-import { postScream, clearErrors } from '../../redux/actions/dataActions';
+import { createPost, clearErrors } from '../../redux/actions/dataActions';
 
 const styles = (theme) => ({
   ...theme,
@@ -32,8 +32,7 @@ const styles = (theme) => ({
   }
 });
 
-class CreatePost
- extends Component {
+class CreatePost extends Component {
   state = {
     open: false,
     body: '',
@@ -61,8 +60,7 @@ class CreatePost
   };
   handleSubmit = (event) => {
     event.preventDefault();
-    this.props.CreatePost
-    ({ body: this.state.body });
+    this.props.createPost({ body: this.state.body });
   };
   render() {
     const { errors } = this.state;
@@ -72,7 +70,7 @@ class CreatePost
     } = this.props;
     return (
       <Fragment>
-        <MyButton onClick={this.handleOpen} tip="Post a Scream!">
+        <MyButton onClick={this.handleOpen} tip="Create a Post!">
           <AddIcon />
         </MyButton>
         <Dialog
@@ -88,16 +86,16 @@ class CreatePost
           >
             <CloseIcon />
           </MyButton>
-          <DialogTitle>Post a new scream</DialogTitle>
+          <DialogTitle>Create a new post</DialogTitle>
           <DialogContent>
             <form onSubmit={this.handleSubmit}>
               <TextField
                 name="body"
                 type="text"
-                label="SCREAM!!"
+                label="POST!!"
                 multiline
                 rows="3"
-                placeholder="Scream at your fellow apes"
+                placeholder="Create a post to find your buddy"
                 error={errors.body ? true : false}
                 helperText={errors.body}
                 className={classes.textField}
@@ -127,10 +125,8 @@ class CreatePost
   }
 }
 
-CreatePost
-.propTypes = {
-  CreatePost
-  : PropTypes.func.isRequired,
+CreatePost.propTypes = {
+  createPost: PropTypes.func.isRequired,
   clearErrors: PropTypes.func.isRequired,
   UI: PropTypes.object.isRequired
 };
@@ -141,7 +137,5 @@ const mapStateToProps = (state) => ({
 
 export default connect(
   mapStateToProps,
-  { CreatePost
-    , clearErrors }
-)(withStyles(styles)(CreatePost
-    ));
+  { postScream, clearErrors }
+)(withStyles(styles)(CreatePost));

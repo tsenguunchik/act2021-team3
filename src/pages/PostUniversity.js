@@ -1,44 +1,35 @@
 import React, { Component } from 'react';
 import Sidebar from '../components/sidebar/Sidebar';
-import Grid from '@material-ui/core/Grid';
 import PropTypes from 'prop-types';
 
 import Post from '../components/post/Post';
-import Profile from '../components/profile/Profile';
 import PostSkeleton from '../util/PostSkeleton';
 
 import { connect } from 'react-redux';
-import { getScreams } from '../redux/actions/dataActions';
-
-//Should include conditional statement so that it will show only Pre-Univ posts
+import { getPosts } from '../redux/actions/dataActions';
 
 class PostUniversity extends Component {
   componentDidMount() {
-    this.props.getScreams();
+    this.props.getPosts();
   }
   render() {
     <Sidebar />
-    const { screams, loading } = this.props.data;
-    let recentScreamsMarkup = !loading ? (
-      screams.map((scream) => <Post key={scream.screamId} scream={scream} />)
+    const { posts, loading } = this.props.data;
+    let recentPostsMarkup = !loading ? (
+      posts.map((post) => <Post key={post.postId} post={post} />)
     ) : (
       <PostSkeleton />
     );
     return (
-      <Grid container spacing={16}>
-        <Grid item sm={8} xs={12}>
-          {recentScreamsMarkup}
-        </Grid>
-        <Grid item sm={4} xs={12}>
-          <Profile />
-        </Grid>
-      </Grid>
+      <div>
+        {recentPostsMarkup}
+      </div>
     );
   }
 }
 
 PostUniversity.propTypes = {
-  getScreams: PropTypes.func.isRequired,
+  getPosts: PropTypes.func.isRequired,
   data: PropTypes.object.isRequired
 };
 
@@ -48,5 +39,6 @@ const mapStateToProps = (state) => ({
 
 export default connect(
   mapStateToProps,
-  { getScreams }
-)(PostUniversity);
+  { getPosts }
+)(PostUniversity
+);

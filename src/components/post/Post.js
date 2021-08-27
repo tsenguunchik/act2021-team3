@@ -4,17 +4,13 @@ import { Link } from 'react-router-dom';
 import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
 import PropTypes from 'prop-types';
-import MyButton from '../../util/MyButton';
 import DeletePost from './DeletePost';
-// import PostDialog from './PostDialog';
-// import LikeButton from './LikeButton';
+import PostDialog from './PostDialog';
 // MUI Stuff
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
-// Icons
-import ChatIcon from '@material-ui/icons/Chat';
 // Redux
 import { connect } from 'react-redux';
 
@@ -38,14 +34,12 @@ class Post extends Component {
     dayjs.extend(relativeTime);
     const {
       classes,
-      Post: {
+      post: {
         body,
         createdAt,
         userImage,
         userHandle,
-        PostId,
-        // likeCount,
-        commentCount
+        postId
       },
       user: {
         authenticated,
@@ -55,7 +49,7 @@ class Post extends Component {
 
     const deleteButton =
       authenticated && userHandle === handle ? (
-        <DeletePost PostId={PostId} />
+        <DeletePost postId={postId} />
       ) : null;
     return (
       <Card className={classes.card}>
@@ -78,17 +72,11 @@ class Post extends Component {
             {dayjs(createdAt).fromNow()}
           </Typography>
           <Typography variant="body1">{body}</Typography>
-          {/* <LikeButton PostId={PostId} />
-          <span>{likeCount} Likes</span> */}
-          <MyButton tip="comments">
-            <ChatIcon color="primary" />
-          </MyButton>
-          <span>{commentCount} comments</span>
-          {/* <PostDialog
-            PostId={PostId}
+          <PostDialog
+            postId={postId}
             userHandle={userHandle}
             openDialog={this.props.openDialog}
-          /> */}
+          />
         </CardContent>
       </Card>
     );
@@ -97,7 +85,7 @@ class Post extends Component {
 
 Post.propTypes = {
   user: PropTypes.object.isRequired,
-  Post: PropTypes.object.isRequired,
+  post: PropTypes.object.isRequired,
   classes: PropTypes.object.isRequired,
   openDialog: PropTypes.bool
 };
