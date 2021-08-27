@@ -28,6 +28,11 @@ export const SidebarData = [
         title: 'Post-University',
         path: '/boards/post-university',
         icon: <IoIcons.IoIosPaper />
+      },
+      {
+        title: 'Other',
+        path: '/boards/other',
+        icon: <IoIcons.IoIosPaper />
       }
     ]
   },

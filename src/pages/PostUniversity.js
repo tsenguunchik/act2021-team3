@@ -10,7 +10,7 @@ import { getPosts } from '../redux/actions/dataActions';
 
 class PostUniversity extends Component {
   componentDidMount() {
-    this.props.getPosts();
+    this.props.getPosts('post-university');
   }
   render() {
     <Sidebar />

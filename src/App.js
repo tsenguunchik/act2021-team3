@@ -8,6 +8,7 @@ import Boards from './pages/Boards';
 import PreUniversity from './pages/PreUniversity';
 import PostUniversity from './pages/PostUniversity';
 import InUniversity from './pages/InUniversity';
+import Other from './pages/Other';
 import User from './pages/User';
 import React from "react";
 import Footer from './components/Footer';
@@ -25,6 +26,7 @@ function App() {
             <Route path='/boards/pre-university' exact component={PreUniversity}/>
             <Route path='/boards/in-university' exact component={InUniversity}/>
             <Route path='/boards/post-university' exact component={PostUniversity}/>
+            <Route path='/boards/other' exact component={Other} />
             <Route exact path="/users/:handle" component={User} />
             <Route path='/profile' component={Profile} />
             <Route path='/myposts' component={MyPosts} />

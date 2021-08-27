@@ -12,10 +12,10 @@ import {
   import axios from 'axios';
   
   // Get all POSTs
-  export const getPosts = () => (dispatch) => {
+  export const getPosts = (board) => (dispatch) => {
     dispatch({ type: LOADING_DATA });
     axios
-      .get('/posts/:board')
+      .get(`/posts/${board}`)
       .then((res) => {
         dispatch({
           type: SET_POSTS,
