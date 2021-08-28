@@ -14,6 +14,7 @@ import React from "react";
 import Footer from './components/Footer';
 import Profile from './components/profile/Profile';
 import MyPosts from './pages/MyPosts';
+import Profile_demo from './pages/demo/Profile_demo';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
             <Route exact path="/users/:handle" component={User} />
             <Route path='/profile' component={Profile} />
             <Route path='/myposts' component={MyPosts} />
+            <Route path='/profile_demo' component={Profile_demo} />
             <Route component={Error404page}/>
 
         </Switch>
