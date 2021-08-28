@@ -1,44 +1,33 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import Sidebar from '../components/sidebar/Sidebar';
-import PropTypes from 'prop-types';
-
 import Post from '../components/post/Post';
-import PostSkeleton from '../util/PostSkeleton';
-
-import { connect } from 'react-redux';
-import { getPosts } from '../redux/actions/dataActions';
 
 class PostUniversity extends Component {
-  componentDidMount() {
-    this.props.getPosts('post-university');
+  state = {
+    posts: null
+  }
+  componentDidMount(){
+    axios.get('/posts')
+      .then(res => {
+        console.log(res.data)
+        this.setState({
+          posts: res.data
+        })
+      })
+      .catch(err => console.log(err));
   }
   render() {
-    <Sidebar />
-    const { posts, loading } = this.props.data;
-    let recentPostsMarkup = !loading ? (
-      posts.map((post) => <Post key={post.postId} post={post} />)
-    ) : (
-      <PostSkeleton />
-    );
+    let recentPostsMarkup = this.state.posts ? (
+      this.state.posts.map((post) => <Post post={post} />)
+    ) : <p>Loading...</p>
     return (
       <div>
+      <Sidebar />
         {recentPostsMarkup}
       </div>
     );
   }
 }
 
-PostUniversity.propTypes = {
-  getPosts: PropTypes.func.isRequired,
-  data: PropTypes.object.isRequired
-};
-
-const mapStateToProps = (state) => ({
-  data: state.data
-});
-
-export default connect(
-  mapStateToProps,
-  { getPosts }
-)(PostUniversity
-);
+export default PostUniversity;

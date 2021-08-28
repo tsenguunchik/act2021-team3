@@ -8,7 +8,7 @@ import {
     LOADING_UI,
     SET_POST,
     STOP_LOADING_UI
-  } from '../reducers/types';
+  } from '../types';
   import axios from 'axios';
   
   // Get all POSTs

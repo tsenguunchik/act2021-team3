@@ -5,7 +5,7 @@ import {
     LOADING_UI,
     SET_UNAUTHENTICATED,
     LOADING_USER
-  } from '../reducers/types';
+  } from '../types';
   import axios from 'axios';
   
   export const loginUser = (userData, history) => (dispatch) => {
