@@ -108,7 +108,7 @@ export default function SignUp() {
                         </Grid>
 
                     </Grid>
-                    <Button
+                    <Button href="/boards"
                         style={style}
                         type="submit"
                         fullWidth
