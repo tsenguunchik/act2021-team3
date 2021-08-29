@@ -72,10 +72,10 @@ import {
       .catch((err) => console.log(err));
   };
   
-  export const getUserData = (userHandle) => (dispatch) => {
+  export const getUserData = (userId) => (dispatch) => {
     dispatch({ type: LOADING_DATA });
     axios
-      .get(`/user/${userHandle}`)
+      .get(`/user/${userId}`)
       .then((res) => {
         dispatch({
           type: SET_POSTS,

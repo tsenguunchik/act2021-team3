@@ -17,14 +17,14 @@ class user extends Component {
     postIdParam: null
   };
   componentDidMount() {
-    const handle = this.props.match.params.handle;
+    const userId = this.props.match.params.userId;
     const postId = this.props.match.params.postId;
 
     if (postId) this.setState({ postIdParam: postId });
 
-    this.props.getUserData(handle);
+    this.props.getUserData(userId);
     axios
-      .get(`/user/${handle}`)
+      .get(`/user/${userId}`)
       .then((res) => {
         this.setState({
           profile: res.data.user

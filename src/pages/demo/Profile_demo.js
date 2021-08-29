@@ -19,11 +19,13 @@ export default function Profile() {
         <Sidebar/>
         <Container className='container'>
             <div className="profileInfo">
+            <div>
             <img
                 className="profileUserImg"
                 src="logo1.png"
                 alt="userImage"
               />
+              </div>
               <div className="profileInfoName">
                 Oyunbileg Davaanyam
               </div>

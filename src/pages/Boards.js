@@ -29,7 +29,7 @@ const Boards = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
         >
-            Welcome to Twogather
+            Welcome to GerGather
         </motion.h1>
       </Header>
       <Body>
