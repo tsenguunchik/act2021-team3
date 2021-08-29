@@ -39,7 +39,7 @@ const ColumnLeft = styled.div`
   }
   p {
     margin: 2rem 0;
-    font-size: 4rem;
+    font-size: 2rem;
     line-height: 1.1;
   }
 `;
@@ -99,7 +99,7 @@ const Home = () => {
                   animate={{ opacity: 1 }}
                   transition={{ duration: 1 }}
                   >
-                      Welcome to Twogather
+                      Welcome to GerGather
                   </motion.h1>
                   <motion.p
                   variant={fadeLeft}
@@ -107,7 +107,8 @@ const Home = () => {
                   animate='visible'
                   transition={{duration: 1}}
                   >
-                     Some paragraph here</motion.p>
+                      GerGather is the way to build a community – of Mongolian students and professionals.
+                  </motion.p>
                   <Link to="/sign-up">
                   <Button
                   whileHover={{ scale: 1.05}}
